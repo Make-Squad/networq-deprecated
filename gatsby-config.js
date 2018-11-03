@@ -1,6 +1,8 @@
+var proxy = require("http-proxy-middleware")
+
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Snapcard',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -27,4 +29,15 @@ module.exports = {
     },
     'gatsby-plugin-offline',
   ],
+  developMiddleware: app => {
+    app.use(
+      "/.netlify/functions/",
+      proxy({
+        target: "http://localhost:9000",
+        pathRewrite: {
+          "/.netlify/functions/": "",
+        },
+      })
+    )
+  },
 }
