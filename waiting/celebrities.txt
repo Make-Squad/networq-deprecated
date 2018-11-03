@@ -1,0 +1,17 @@
+Name: Marilyn Monroe
+Email: marilyn@realmarilynmonroe.com
+Phone: 123-456-7890
+City, State: Los Angeles, CA
+Other: Twitter @notTheRealMarilyn
+
+Name: Kayne West
+Email: kayne@yeezus.com
+Phone: 555-667-7889
+City, State: Calabasas, CA
+Other: Twitter @kaynewest
+
+Name: Leonardo DiCaprio
+Email: leo@anincovenientemail.com
+Phone: 908-675-3421
+City, State: Los Angeles, CA
+Other: Twitter @LeoDiCaprio

@@ -1,0 +1,66 @@
+<<<<<<< HEAD
+<!doctype html>
+<html lang="en" data-framework="react">
+	<head>
+		<meta charset="utf-8">
+		<title>SnapCard</title>
+		<link rel="stylesheet" href="node_modules/todomvc-common/base.css">
+		<link rel="stylesheet" href="node_modules/todomvc-app-css/index.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class="container-fluid img-fluid">
+			<h1 class="text-center">SnapCard</h1>
+			<div class="row justify-content-around">
+
+				<div class="col-sm-6">
+					<input type="file" onchange="uploadFile()"><br>
+				    <img src="../../placeholder-image.jpg" style="width: 85%" alt="Image preview"/>
+				</div>
+
+				<div class="col-sm-6">
+					<img class="placeholder" style="width: 100%" src="../../placeholder-image.jpg" alt="">
+				</div>
+
+			</div>
+			<div class="d-flex flex-row justify-content">
+				<div class="col d-flex justify-content-center">
+					<h3 text-center>Bob the Builder</h3>
+				</div>
+			</div>
+		</div>
+
+		<section class="todoapp"></section>
+		<footer class="info">
+			<!-- <p>Double-click to edit a todo</p>
+			<p>Created by <a href="http://github.com/petehunt/">petehunt</a></p>
+			<p>Part of <a href="http://todomvc.com">TodoMVC</a></p> -->
+		</footer>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script>
+		// reference code from https://stackoverflow.com/questions/22087076/how-to-make-a-simple-image-upload-using-javascript-html
+		function uploadFile(){
+			var preview = document.querySelector('img'); //selects the query named img
+			var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+			var reader  = new FileReader();
+
+			reader.onloadend = function () {
+				preview.src = reader.result;
+			}
+
+			if (file) {
+				reader.readAsDataURL(file); //reads the data as a URL
+			} else {
+				preview.src = "";
+			}
+			}
+
+			uploadFile();
+
+			uploadFile();
+		</script>
+	</body>
+</html>
+=======
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><script src="/socket.io/socket.io.js"></script></head><body><div id="___gatsby"></div><script src="/commons.js"></script></body></html>
+>>>>>>> b5e0b09fd77179850d45b18031e3f58aeba1a330
