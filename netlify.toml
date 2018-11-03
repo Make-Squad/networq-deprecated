@@ -1,0 +1,9 @@
+[build]
+  functions = "functions"
+  # This will be run the site build
+  command = ""
+  # This is the directory is publishing to netlify's CDN
+  publish = ""
+
+[template.environment]
+  FAUNADB_SECRET = "fnAC-797shACAWlckZ9lK9ZygC4Xbx9s83daAlV7"
