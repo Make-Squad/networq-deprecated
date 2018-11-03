@@ -7,10 +7,10 @@
 [here](https://pedantic-wozniak-e1905a.netlify.com/) *Not currently working
 
 ## Structure
-`/assets` - scripts, stylesheets, and media (eg. pictures)
+`/waiting` - static files waiting to be converted to react components
 
-`index.html` - Base html file
+`/src` - React components
 
-`/functions` - Lambda functions to be used by netlify for server-side functions
+`/public` - Build directory
 
-`netlify.toml` - Netlify deploy configuration
+`netlify.toml` - Netlify deployment settings
