@@ -13,11 +13,8 @@
 			<div class="row justify-content-around">
 
 				<div class="col-sm-6">
-					<form id="form1" runat="server">
-					    <input type='file' id="inputFile" />
-					    <img id="image_upload_preview" src="../../placeholder-image.jpg" style="width: 75%" alt="Image preview"/>
-					</form>
-					<!-- <img src="../media/placeholder-image.jpg" style="width: 50%" alt="Image preview..."> -->
+					<input type="file" onchange="uploadFile()"><br>
+				    <img src="../../placeholder-image.jpg" style="width: 85%" alt="Image preview"/>
 				</div>
 
 				<div class="col-sm-6">
@@ -41,36 +38,25 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script>
 		// reference code from https://stackoverflow.com/questions/22087076/how-to-make-a-simple-image-upload-using-javascript-html
-			// function uploadFile(){
-			// 	let image = document.querySelector('img');
-			// 	let imageFile = document.querySelector('')
-			// 	let reader = new FileReader();
-			//
-			// 	reader.onloadend = function () {
-			// 		preview.src = reader.result;
-			// 	}
-			//
-			// 	if (file) {
-			// 		reader.readAsDataURL(file);
-			// 	} else {
-			//
-			// 	}
-			// }
+		function uploadFile(){
+			var preview = document.querySelector('img'); //selects the query named img
+			var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+			var reader  = new FileReader();
 
-			function readURL(input) {
-		       if (input.files && input.files[0]) {
-		           var reader = new FileReader();
+			reader.onloadend = function () {
+				preview.src = reader.result;
+			}
 
-		           reader.onload = function (e) {
-		               $('#image_upload_preview').attr('src', e.target.result);
-		           }
-		           reader.readAsDataURL(input.files[0]);
-		       }
-			 }
-			   $("#inputFile").change(function () {
-			       readURL(this);
-			   });
+			if (file) {
+				reader.readAsDataURL(file); //reads the data as a URL
+			} else {
+				preview.src = "";
+			}
+			}
 
+			uploadFile();
+
+			uploadFile();
 		</script>
 	</body>
 </html>
