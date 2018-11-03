@@ -11,14 +11,19 @@
 		<div class="container-fluid img-fluid">
 			<h1 class="text-center">SnapCard</h1>
 			<div class="row justify-content-around">
+
 				<div id="upload" class="col-sm-6">
-					Test
-					<img class="placeholder" style="width: 100%" src="../media/placeholder-image.jpg" alt="">
+					<form id="form1" runat="server">
+					    <input type='file' id="inputFile" />
+					    <img id="image_upload_preview" src="../media/placeholder-image.jpg" style="width: 75%" alt="Image preview"/>
+					</form>
+					<!-- <img src="../media/placeholder-image.jpg" style="width: 50%" alt="Image preview..."> -->
 				</div>
+
 				<div id="image-box" class="col-sm-6">
-					test
 					<img class="placeholder" style="width: 100%" src="../media/placeholder-image.jpg" alt="">
 				</div>
+
 			</div>
 			<div class="d-flex flex-row justify-content">
 				<div class="col d-flex justify-content-center">
@@ -29,10 +34,43 @@
 
 		<section class="todoapp"></section>
 		<footer class="info">
-			<p>Double-click to edit a todo</p>
+			<!-- <p>Double-click to edit a todo</p>
 			<p>Created by <a href="http://github.com/petehunt/">petehunt</a></p>
-			<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+			<p>Part of <a href="http://todomvc.com">TodoMVC</a></p> -->
 		</footer>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script>
+		// reference code from https://stackoverflow.com/questions/22087076/how-to-make-a-simple-image-upload-using-javascript-html
+			function uploadFile(){
+				let image = document.querySelector('img');
+				let imageFile = document.querySelector('')
+				let reader = new FileReader();
+
+				reader.onloadend = function () {
+					preview.src = reader.result;
+				}
+
+				if (file) {
+					reader.readAsDataURL(file);
+				} else {
+
+				}
+			}
+			// function readURL(input) {
+		    //    if (input.files && input.files[0]) {
+		    //        var reader = new FileReader();
+			//
+		    //        reader.onload = function (e) {
+		    //            $('#image_upload_preview').attr('src', e.target.result);
+		    //        }
+			//
+		    //        reader.readAsDataURL(input.files[0]);
+		    //    }
+			//    }
+			//
+			//    $("#inputFile").change(function () {
+			//        readURL(this);
+			//    });
+		</script>
 	</body>
 </html>
