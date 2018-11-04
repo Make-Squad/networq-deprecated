@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Webcam from 'react-webcam'
+import axios from 'axios'
 
 import Clarifai from 'clarifai'
 
 import '../components/styles.css'
 
 const app = new Clarifai.App({
-  apiKey: 'a',
+  apiKey: 'ee055cb5f7494c47b0640889e562e4e9',
 })
 
 class Demo extends Component {
@@ -20,6 +21,7 @@ class Demo extends Component {
       imagePreviewUrl: '',
     }
   }
+
   // https://codepen.io/hartzis/pen/VvNGZP
   _handleSubmit(e) {
     e.preventDefault()
@@ -38,6 +40,16 @@ class Demo extends Component {
         })
       })
 
+    axios
+      .get(
+        'https://pedantic-wozniak-e1905a.netlify.com/.netlify/functions/cards-read/Kayne%20West',
+        {
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+          },
+        }
+      )
+      .then(response => console.log(response))
     // console.log('handle uploading-', base64Data);
   }
 
@@ -57,25 +69,7 @@ class Demo extends Component {
     reader.readAsDataURL(file)
   }
 
-  setRef = webcam => {
-    this.webcam = webcam
-  }
-
-  capture = () => {
-    const imageSrc = this.webcam.getScreenshot()
-
-    this.setState({
-      imagePreviewUrl: imageSrc,
-    })
-  }
-
   render() {
-    const videoConstraints = {
-      width: 1280,
-      height: 720,
-      facingMode: 'user',
-    }
-
     let { imagePreviewUrl } = this.state
     let $imagePreview = null
     if (imagePreviewUrl) {
@@ -92,38 +86,28 @@ class Demo extends Component {
 
     return (
       <div className="form-container">
-        <h1>{this.state.name}</h1>
-        <div className="previewComponent">
-          <form onSubmit={e => this._handleSubmit(e)}>
-            <input
-              className="fileInput"
-              type="file"
-              onChange={e => this._handleImageChange(e)}
-            />
-            <button
-              className="submitButton"
-              type="submit"
-              onClick={e => this._handleSubmit(e)}
-            >
-              <span class="mi mi-face" />
-              Upload Image
-            </button>
-          </form>
-          <div className="imgPreview">{$imagePreview}</div>
-        </div>
-
-        <hr />
+        <form className="form" onSubmit={e => this._handleSubmit(e)}>
+          <button className="fileInput imgPreview">{$imagePreview}</button>
+          <input
+            className="fileInput"
+            type="file"
+            onChange={e => this._handleImageChange(e)}
+          />
+          <button
+            className="submitButton"
+            type="submit"
+            onClick={e => this._handleSubmit(e)}
+          >
+            Upload Image
+          </button>
+        </form>
 
         <div>
-          <Webcam
-            audio={false}
-            height={350}
-            ref={this.setRef}
-            screenshotFormat="image/png"
-            width={350}
-            videoConstraints={videoConstraints}
-          />
-          <button onClick={this.capture}>Capture photo</button>
+          <h1>{this.state.name}</h1>
+          <p>email: </p>
+          <p>phone: </p>
+          <p>city, state</p>
+          <p>twitter</p>
         </div>
       </div>
     )
