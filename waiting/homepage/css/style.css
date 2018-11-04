@@ -1254,6 +1254,7 @@ button:focus {
 
 .menu_two {
     padding: 0px;
+    color: red;
 }
 
 .menu_two .w_menu>.nav-item .nav-link:before {
