@@ -21,20 +21,22 @@ class IndexPage extends React.Component {
 
     return (
       <Layout>
-        <div className="home-container">
-        <h1></h1>
-        <p>Welcome to Networq!</p>
+        <p style={{
+            paddingTop: '40px'
+        }}
+          >Welcome to Networq!</p>
         <p>
           <button onClick={this.handleClick}>
             {loading ? msg : 'Call Lambda'}
           </button>
           <br />
         </p>
-        
-        <Link to="/demo/">Go to Demo</Link>
+
+        <div>
+          <Link to="/demo/">Go to Demo</Link>
+        </div>
         <div>
           <Link to="/video/">Go to Video</Link>
-        </div>
         </div>
       </Layout>
     )
