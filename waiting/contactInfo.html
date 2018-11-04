@@ -10,47 +10,107 @@
 </head>
 
 <body>
-<form method="POST" action="https://formspree.io/boocheet@gmail.com" class = "form-template">
-  <div class="form-example">
-    <label for="name">First Name: </label>
-    <input type="text" name="name" placeholder="First Name" required>
-    <label for="name">Last Name: </label>
-    <input type="text" name="name" placeholder="Last Name" required>
-  </div>
-  <div class="form-template">
-    <label for="email">Email: </label>
-    <input type="email" name="email" placeholder="Youremail@google.com"required>
-  </div>
-  <div class="form-template">
-    <label for="phone">Phone Number: </label>
-    <input type="tel" id="phone" name="phone"
-             placeholder="123-456-7890"
-             pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-             required />
-  </div>
-  <div class="form-template">
-    <label for="Company">Company: </label>
-    <input type="text" name="company" placeholder="Company" required>
-    <label for="Title/Role"> Title/Role </label>
-    <input type="text" name="title" placeholder="Title/Role" required>
-  </div>
-  <div class="form-template">
-    <label for="City"> City </label>
-    <input type="text" name="city" placeholder= "City">
-    <label for="state"> State </label>
-    <input type="text" name="state" placeholder= "State" >
-  </div>
-  <div class="form-template">
-    <textarea name="message" placeholder="Bio"></textarea>
+<!-- <form method="POST" action="https://formspree.io/boocheet@gmail.com" class = "form-template"> -->
+    <div class="container">
+    <form id="contact" action="" method="post">
+      <h3>Business Card Info</h3>
+      <h4>Sign up for free!</h4>
+      <fieldset>
+        <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Your Email Address" type="email" tabindex="2" required>
+      </fieldset>
+
+      <fieldset>
+        <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
+      </fieldset>
+      <div class="form-group">
+    <label class="col-md-4 control-label"></label>
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+          <span class="input-group-addon"></span>
+    <input name="city" placeholder="City" class="form-control"  style="width: 50%" type="text">
+      </div>
+    </div>
   </div>
 
-  <div class="form-example">
-    <input type="submit" value="Subscribe!">
+  <div class="form-group">
+    <label class="col-md-4 control-label">State</label>
+      <div class="col-md-4 selectContainer">
+      <div class="input-group">
+          <span class="input-group-addon"></span>
+      <select name="state" class="form-control selectpicker" >
+        <option value=" " >Please select your state</option>
+        <option>Alabama</option>
+        <option>Alaska</option>
+        <option >Arizona</option>
+        <option >Arkansas</option>
+        <option >California</option>
+        <option >Colorado</option>
+        <option >Connecticut</option>
+        <option >Delaware</option>
+        <option >District of Columbia</option>
+        <option> Florida</option>
+        <option >Georgia</option>
+        <option >Hawaii</option>
+        <option >daho</option>
+        <option >Illinois</option>
+        <option >Indiana</option>
+        <option >Iowa</option>
+        <option> Kansas</option>
+        <option >Kentucky</option>
+        <option >Louisiana</option>
+        <option>Maine</option>
+        <option >Maryland</option>
+        <option> Mass</option>
+        <option >Michigan</option>
+        <option >Minnesota</option>
+        <option>Mississippi</option>
+        <option>Missouri</option>
+        <option>Montana</option>
+        <option>Nebraska</option>
+        <option>Nevada</option>
+        <option>New Hampshire</option>
+        <option>New Jersey</option>
+        <option>New Mexico</option>
+        <option>New York</option>
+        <option>North Carolina</option>
+        <option>North Dakota</option>
+        <option>Ohio</option>
+        <option>Oklahoma</option>
+        <option>Oregon</option>
+        <option>Pennsylvania</option>
+        <option>Rhode Island</option>
+        <option>South Carolina</option>
+        <option>South Dakota</option>
+        <option>Tennessee</option>
+        <option>Texas</option>
+        <option> Uttah</option>
+        <option>Vermont</option>
+        <option>Virginia</option>
+        <option >Washington</option>
+        <option >West Virginia</option>
+        <option>Wisconsin</option>
+        <option >Wyoming</option>
+      </select>
+    </div>
+  </div>
   </div>
 
-</form>
+      <fieldset>
+        <input placeholder="Your LinkedIn starts with linkedin.com/in/" type="url" tabindex="4" required>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Your Twitter handle starts with @" type="url" tabindex="4" required>
+      </fieldset>
+      <fieldset>
+        <textarea placeholder="Other" tabindex="5" required></textarea>
+      </fieldset>
+      <fieldset>
+        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+      </fieldset>
+    </form>
 
-  <script src="assets/scripts/main.js"></script>
-</body>
 
-</html>
+  </div>

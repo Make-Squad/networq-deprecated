@@ -1,58 +1,8 @@
-/*----------------------------------------------------
-@File: Default Styles
-@Author: Md. Shahadat Hussain
-@URL: https://themeforest.net/user/droitthemes
-
-This file contains the styling for the actual template, this
-is the file you need to edit to change the look of the
-template.
----------------------------------------------------- */
-
-/*=====================================================================
-@Template Name:
-@Author: Md. Shahadat Hussain
-@Developed By: Rony
-@Developer URL: https://themeforest.net/user/droitthemes
-
-@Default Styles
-
-Table of Content:
-01/ variables
-02/ predefine
-03/ button
-04/ preloader
-05/ header
-06/ banner
-07/ breadcrumb
-08/ features
-09/ service
-10/ price
-11/ about
-12/ testimonial
-13/ screenshot
-14/ joblist
-15/ faq
-16/ portfolio
-17/ contact
-18/ error
-19/ shop
-20/ blog
-21/ footer
-
-=====================================================================*/
-
-/*====================================================*/
 
 /*=== fonts ====*/
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900");
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
-/*===== color =====*/
-
-/*====================================================*/
-
-/*====================================================*/
 
 a {
     text-decoration: none;
@@ -1254,6 +1204,7 @@ button:focus {
 
 .menu_two {
     padding: 0px;
+    color: red;
 }
 
 .menu_two .w_menu>.nav-item .nav-link:before {
@@ -1670,7 +1621,7 @@ button:focus {
     color: #5e2ced;
 }
 
-.header_area_three.navbar_fixed .menu_four .btn_get {
+.header_area_three .menu_four .btn_get {
     border-color: #5e2ced !important;
 }
 
@@ -1881,12 +1832,6 @@ button:focus {
 /*============ sticky menu css ==============*/
 
 .header_area {
-    -webkit-transition: all 0.2s linear;
-    -o-transition: all 0.2s linear;
-    transition: all 0.2s linear;
-}
-
-.header_area.navbar_fixed {
     position: fixed;
     top: 0;
     left: 0;
@@ -1896,162 +1841,162 @@ button:focus {
     box-shadow: 0px 4px 6px 0px rgba(12, 0, 46, 0.06);
 }
 
-.header_area.navbar_fixed .menu_one {
+.header_area .menu_one {
     padding: 0px;
     -webkit-transition: all 0.2s linear;
     -o-transition: all 0.2s linear;
     transition: all 0.2s linear;
 }
 
-.header_area.navbar_fixed .menu_one .btn_get {
+.header_area. .menu_one .btn_get {
     -webkit-box-shadow: none;
     box-shadow: none;
 }
 
-.header_area.navbar_fixed .sticky_logo img {
+.header_area .sticky_logo img {
     display: none;
 }
 
-.header_area.navbar_fixed .sticky_logo img+img {
+.header_area.sticky_logo img+img {
     display: block;
 }
 
-.header_area.navbar_fixed .w_menu .nav-item .nav-link {
+.header_area .w_menu .nav-item .nav-link {
     color: #051441;
 }
 
-.header_area.navbar_fixed .w_menu .nav-item .nav-link:before {
+.header_area .w_menu .nav-item .nav-link:before {
     background: #051441;
 }
 
-.header_area.navbar_fixed .menu_two .menu_toggle .hamburger-cross span,
-.header_area.navbar_fixed .menu_two .menu_toggle .hamburger span {
+.header_area .menu_two .menu_toggle .hamburger-cross span,
+.header_area .menu_two .menu_toggle .hamburger span {
     background: #051441;
 }
 
-.header_area.navbar_fixed .menu_two .nav_right_btn .login_btn.active,
-.header_area.navbar_fixed .menu_two .nav_right_btn .login_btn:hover {
+.header_area .menu_two .nav_right_btn .login_btn.active,
+.header_area .menu_two .nav_right_btn .login_btn:hover {
     border-color: #00aff0;
     color: #00aff0;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
 
-.header_area.navbar_fixed .menu_two .nav_right_btn .login_btn.active:hover {
+.header_area .menu_two .nav_right_btn .login_btn.active:hover {
     background: #00aff0;
     color: #fff;
 }
 
-.header_area.navbar_fixed .menu_four .btn_get {
+.header_area .menu_four .btn_get {
     border: 2px solid #ccc5fa;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
 
-.header_area.navbar_fixed .menu_four .btn_get:hover {
+.header_area .menu_four .btn_get:hover {
     border-color: #6754e2;
 }
 
-.header_area.navbar_fixed .menu_four .menu_toggle .hamburger span,
-.header_area.navbar_fixed .menu_four .menu_toggle .hamburger-cross span {
+.header_area .menu_four .menu_toggle .hamburger span,
+.header_area .menu_four .menu_toggle .hamburger-cross span {
     background: #6754e2;
 }
 
-.header_area.navbar_fixed .nav_right_btn .login_btn {
+.header_area .nav_right_btn .login_btn {
     color: #051441;
 }
 
-.header_area.navbar_fixed .menu_five .btn_get {
+.header_area .menu_five .btn_get {
     border-color: #3d64f4;
     color: #3d64f4;
 }
 
-.header_area.navbar_fixed .menu_five .btn_get:hover {
+.header_area .menu_five .btn_get:hover {
     background: #3d64f4;
     color: #fff;
 }
 
-.header_area.navbar_fixed .menu_five .menu_toggle .hamburger-cross span,
-.header_area.navbar_fixed .menu_five .menu_toggle .hamburger span {
+.header_area .menu_five .menu_toggle .hamburger-cross span,
+.header_area .menu_five .menu_toggle .hamburger span {
     background: #3d64f4;
 }
 
-.header_area.navbar_fixed .menu_six .menu>.nav-item>.nav-link {
+.header_area .menu_six .menu>.nav-item>.nav-link {
     color: #051441;
 }
 
-.header_area.navbar_fixed .menu_six .menu>.nav-item:hover>.nav-link,
-.header_area.navbar_fixed .menu_six .menu>.nav-item.active>.nav-link {
+.header_area .menu_six .menu>.nav-item:hover>.nav-link,
+.header_area .menu_six .menu>.nav-item.active>.nav-link {
     color: #3d57f4;
 }
 
-.header_area.navbar_fixed .menu_six .menu>.nav-item:hover>.nav-link:before,
-.header_area.navbar_fixed .menu_six .menu>.nav-item.active>.nav-link:before {
+.header_area .menu_six .menu>.nav-item:hover>.nav-link:before,
+.header_area .menu_six .menu>.nav-item.active>.nav-link:before {
     background: #3d57f4;
 }
 
-.header_area.navbar_fixed .menu_six .menu_toggle .hamburger-cross span,
-.header_area.navbar_fixed .menu_six .menu_toggle .hamburger span {
+.header_area .menu_six .menu_toggle .hamburger-cross span,
+.header_area .menu_six .menu_toggle .hamburger span {
     background: #3d57f4;
 }
 
-.header_area.navbar_fixed .menu_six .btn_get {
+.header_area .menu_six .btn_get {
     border-color: #3d57f4;
     -webkit-box-shadow: none;
     box-shadow: none;
     color: #3d57f4;
 }
 
-.header_area.navbar_fixed .menu_six .btn_get:hover {
+.header_area .menu_six .btn_get:hover {
     color: #fff;
 }
 
-.header_area.navbar_fixed .menu_seven .menu>.nav-item>.nav-link {
+.header_area .menu_seven .menu>.nav-item>.nav-link {
     color: #051441;
 }
 
-.header_area.navbar_fixed .menu_seven .menu>.nav-item:hover>.nav-link,
-.header_area.navbar_fixed .menu_seven .menu>.nav-item.active>.nav-link {
+.header_area .menu_seven .menu>.nav-item:hover>.nav-link,
+.header_area .menu_seven .menu>.nav-item.active>.nav-link {
     color: #4069eb;
 }
 
-.header_area.navbar_fixed .menu_seven .menu>.nav-item:hover>.nav-link:before,
-.header_area.navbar_fixed .menu_seven .menu>.nav-item.active>.nav-link:before {
+.header_area .menu_seven .menu>.nav-item:hover>.nav-link:before,
+.header_area .menu_seven .menu>.nav-item.active>.nav-link:before {
     background: #4069eb;
 }
 
-.header_area.navbar_fixed .menu_seven .btn_get {
+.header_area .menu_seven .btn_get {
     border-color: #4069eb;
     color: #4069eb;
 }
 
-.header_area.navbar_fixed .menu_seven .btn_get:hover {
+.header_area .menu_seven .btn_get:hover {
     background: #4069eb;
     color: #fff;
 }
 
-.header_area.navbar_fixed .menu_seven .menu_toggle .hamburger-cross span,
-.header_area.navbar_fixed .menu_seven .menu_toggle .hamburger span {
+.header_area .menu_seven .menu_toggle .hamburger-cross span,
+.header_area .menu_seven .menu_toggle .hamburger span {
     background: #4069eb;
 }
 
-.header_area.navbar_fixed .menu_eight .saas_btn {
+.header_area .menu_eight .saas_btn {
     border-color: #23b1fe;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
 
-.header_area.navbar_fixed .menu_eight .saas_btn:hover {
+.header_area .menu_eight .saas_btn:hover {
     background: #23b1fe;
     color: #fff;
 }
 
-.header_area.navbar_fixed .menu_eight .menu_toggle .hamburger span,
-.header_area.navbar_fixed .menu_eight .menu_toggle .hamburger-cross span {
+.header_area .menu_eight .menu_toggle .hamburger span,
+.header_area .menu_eight .menu_toggle .hamburger-cross span {
     background: #23b1fe;
 }
 
-.header_area.navbar_fixed.header_area_five .menu_one {
+.header_area.header_area_five .menu_one {
     padding: 0px 50px;
 }
 
@@ -2155,14 +2100,6 @@ button:focus {
     z-index: 1;
 }
 
-.slider_area .bottom_shoape {
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-}
-
 .slider_area .middle_shape {
     position: absolute;
     right: 0;
@@ -2205,14 +2142,14 @@ button:focus {
 }
 
 .mobile_img .women_img {
-    top: 300px;
+    top: 15em;
     right: 10px;
     z-index: 1;
 }
 
 .slider_content {
     color: #fff;
-    padding-top: 200px;
+    padding-top: 100px;
 }
 
 @-webkit-keyframes animateUpDown {
@@ -11233,10 +11170,6 @@ input[type=number]::-webkit-inner-spin-button {
 .footer_dark_ten .dark_f_bottom .f_menu li a:hover,
 .footer_dark_ten .dark_f_bottom a {
     color: #23b1fe;
-}
-.whole-page-wrapper {
-    display: flex;
-    flex-flow: column nowrap;
 }
 
 /*====================================================*/
