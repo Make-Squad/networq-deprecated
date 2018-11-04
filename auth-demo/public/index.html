@@ -48,16 +48,24 @@
 		</div>
 
 		<section class="slider_area">
-			<div class="container">
-				<div class="row">
+
+			<div class="container-fluid img-fluid">
+				<div class="row justify-content-around">
 					<div class="col-lg-7 d-flex align-items-center">
 						<div class="slider_content">
-							<p style="font-family: Open sans; font-size:190%; font-weight: 700; color: white;">Can we fix it?</p>
-							<p class="f_300 l_height28 mt_30">Yes, we can!</p>
+							<div id="upload" class="col-sm-6">
+								<section>
+									<input type="file" onchange="uploadFile()"/>
+								</section>
+								<figure>
+									<img class="placeholder" style="width: 80%" src="../../waiting/homepage/img/placeholder-image.jpg" alt=""/>
+								</figure>
+							</div>
 						</div>
 					</div>
 					<div class="col-lg-5">
-						<div class="mobile_img">
+						<div id="image-box" class="col-sm-6">
+							<img class="placeholder" style="width: 100%" src="../../waiting/homepage/img/placeholder-image.jpg" alt=""/>
 						</div>
 					</div>
 				</div>
@@ -67,25 +75,6 @@
 			<img class="middle_shape" src="../../waiting/homepage/img/home2/shape_01.png" alt="">
 			<img class="bottom_shoape" src="../../waiting/homepage/img/home2/shape.png" alt="">
 		</section>
-
-		<div class="container-fluid img-fluid">
-			<!-- <h1 class="text-center">networkq</h1> -->
-			<div class="row justify-content-around">
-				<div id="upload" class="col-sm-6">
-					Test
-					<img class="placeholder" style="width: 100%" src="../media/placeholder-image.jpg" alt="">
-				</div>
-				<div id="image-box" class="col-sm-6">
-					test
-					<img class="placeholder" style="width: 100%" src="../media/placeholder-image.jpg" alt="">
-				</div>
-			</div>
-			<div class="d-flex flex-row justify-content">
-				<div class="col d-flex justify-content-center">
-					<h3 text-center>Bob the Builder</h3>
-				</div>
-			</div>
-		</div>
 
 		<footer class="info"></footer>
 
