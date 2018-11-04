@@ -7,9 +7,9 @@
 [here](https://pedantic-wozniak-e1905a.netlify.com/)
 
 ## Built With
-[Clarifai](https://clarifai.com)
-[Fauna](https://fauna.com/)
-[Formspree](https://formspree.io/)
+- [Clarifai](https://clarifai.com)
+- [Fauna](https://fauna.com/)
+- [Formspree](https://formspree.io/)
 
 ## Structure
 `/waiting` - static files waiting to be converted to react components
