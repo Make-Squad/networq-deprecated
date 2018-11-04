@@ -15,8 +15,7 @@
     "gatsby-transformer-sharp": "^2.1.4",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
-    "react-helmet": "^5.2.0",
-    "webpack": "^4.24.0"
+    "react-helmet": "^5.2.0"
   },
   "keywords": [
     "gatsby"
@@ -25,7 +24,7 @@
   "scripts": {
     "build": "run-p build:**",
     "build:app": "gatsby build",
-    "build:lambda": "netlify-lambda build src/lambda",
+    "build:lambda": "netlify-lambda build src/lambda -c ./webpack.config.js",
     "develop": "gatsby develop",
     "start": "run-p start:**",
     "start:app": "npm run develop",
