@@ -2199,14 +2199,14 @@ button:focus {
 }
 
 .mobile_img .women_img {
-    top: 10em;
+    top: 15em;
     right: 10px;
     z-index: 1;
 }
 
 .slider_content {
     color: #fff;
-    padding-top: 200px;
+    padding-top: 100px;
 }
 
 @-webkit-keyframes animateUpDown {
