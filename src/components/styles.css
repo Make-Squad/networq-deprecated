@@ -8,7 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: hsl(255, 61%, 35%);
-  font-family: 'Fjalla One', sans-serif;
+  font-family: "Fjalla One", sans-serif;
 }
 
 .form-container {
@@ -42,4 +42,64 @@ body {
 
 #image_upload_preview {
   height: 200px;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center button {
+  width: 25%;
+}
+
+.button-style {
+  border-radius: 5px;
+  background-color: #3e2390;
+  color: white;
+  font-size: 15px;
+  outline: none;
+  padding: 10px 5px;
+}
+
+.video {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0px;
+  justify-content: center;
+}
+
+.preview-container-video {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 95vh;
+  text-align: center;
+  margin: 50px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.video-submit {
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: #3e2390;
+  color: white;
+  font-size: 15px;
+  outline: none;
+  padding: 10px 5px;
+  width: 80%;
+}
+
+.video-preview {
+  margin-bottom: 0px !important;
 }
