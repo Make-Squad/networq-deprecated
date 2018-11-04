@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-
+import Demo from './demo'
 import Layout from '../components/layout'
 import Image from '../components/image'
 
@@ -37,7 +37,7 @@ class IndexPage extends React.Component {
         <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
           <Image />
         </div>
-        <Link to="/page-2/">Go to page 2</Link>
+        <Link to="/demp/">Go to Demo</Link>
       </Layout>
     )
   }
