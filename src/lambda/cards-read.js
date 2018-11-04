@@ -15,7 +15,7 @@ export function handler(event, context, callback) {
   console.log(event)
   let id = getId(event.path)
   console.log(`Function 'cards-read' invoked. Read id: ${id}`)
-  if (id.includes('%20')) {
+  if (id.indexOf('%20') !== -1) {
     id = decodeURI(id)
     return client
     .query(q.Paginate(q.Match(q.Ref('indexes/cards_by_name'), id)))
