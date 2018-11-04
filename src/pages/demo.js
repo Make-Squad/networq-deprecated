@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-<<<<<<< HEAD
-=======
 import Webcam from 'react-webcam'
 import axios from 'axios'
->>>>>>> d63f8c4ef48b64e138a21728a55744fa166996d1
 
 import Clarifai from 'clarifai'
 
