@@ -1,26 +1,23 @@
 require('dotenv').config()
+
 var faunadb = require('faunadb'),
   q = faunadb.query
 
-/* configure faunaDB Client with our secret */
+var getId = urlPath => {
+  return urlPath.match(/([^\/]*)\/*$/)[0]
+}
+
 const client = new faunadb.Client({
   secret: process.env.FAUNADB_SECRET,
 })
 
-/* export our lambda function as named "handler" export */
 export function handler(event, context, callback) {
-  /* parse the string body into a useable JS object */
-  const data = JSON.parse(event.body)
-  console.log('Function `cards-create` invoked', data)
-  const cardItem = {
-    data: data,
-  }
-  /* construct the fauna query */
+  const id = getId(event.path)
+  console.log(`Function 'cards-delete' invoked. delete id: ${id}`)
   return client
-    .query(q.Create(q.Ref('classes/cards'), cardItem))
+    .query(q.Delete(q.Ref(`classes/cards/${id}`)))
     .then(response => {
       console.log('success', response)
-      /* Success! return the response with statusCode 200 */
       return callback(null, {
         statusCode: 200,
         body: JSON.stringify(response),
@@ -28,7 +25,6 @@ export function handler(event, context, callback) {
     })
     .catch(error => {
       console.log('error', error)
-      /* Error! return the error with statusCode 400 */
       return callback(null, {
         statusCode: 400,
         body: JSON.stringify('There was an error, check the logs.'),
