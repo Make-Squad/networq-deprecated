@@ -23,13 +23,6 @@
 
 
     /*--------- WOW js-----------*/
-    function wowAnimation() {
-        new WOW({
-            offset: 100,
-            mobile: true
-        }).init()
-    }
-    wowAnimation()
 
     var $animation_elements = $('.scroll_animation');
     var $window = $(window);
