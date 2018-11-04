@@ -17,8 +17,14 @@ class Video extends Component {
 
     this.state = {
       name: 'none',
+      query_format: '',
       file: '',
       imagePreviewUrl: '',
+      email: '',
+      twitter: '',
+      city: '',
+      phone: '',
+      state: '',
     }
   }
   // https://codepen.io/hartzis/pen/VvNGZP
@@ -37,9 +43,37 @@ class Video extends Component {
         this.setState({
           name: celebName,
         })
+
+        var formatted = celebName.split(' ')
+        formatted = formatted.join('%20')
+        var url = '/.netlify/functions/cards-read/' + formatted
+        console.log('url produced: ', url)
+        console.log(
+          'correct version: /.netlify/functions/cards-read/kayne%20west'
+        )
+        fetch(url)
+          .then(response => response.json())
+          .then(json => {
+            console.log(json)
+            const res_email = json[0]['data']['email']
+            const res_twitter = json[0]['data']['twitter']
+            const res_city = json[0]['data']['city']
+            const res_phone = json[0]['data']['phone']
+            const res_state = json[0]['data']['state']
+
+            this.setState({
+              email: res_email,
+              twitter: res_twitter,
+              city: res_city,
+              phone: res_phone,
+              state: res_state,
+            })
+            // console.log(json[0])
+          })
       })
 
-    // console.log('handle uploading-', base64Data);
+    // .then(json => this.setState({ loading: true, msg: json.msg }))
+    // console.log('handle uploading-', base64Data)
   }
 
   _handleImageChange(e) {
@@ -93,8 +127,7 @@ class Video extends Component {
 
     return (
       <div className="form-container">
-      <Link to="/">Go Back</Link>
-        <h1>{this.state.name}</h1>
+        <Link to="/">Go Back</Link>
         <div className="previewComponent">
           <form onSubmit={e => this._handleSubmit(e)}>
             <input
@@ -112,20 +145,28 @@ class Video extends Component {
             </button>
           </form>
           <div className="imgPreview">{$imagePreview}</div>
-        </div>
 
-        <hr />
+          <div>
+            <Webcam
+              audio={false}
+              height={350}
+              ref={this.setRef}
+              screenshotFormat="image/png"
+              width={350}
+              videoConstraints={videoConstraints}
+            />
+            <button onClick={this.capture}>Capture photo</button>
+          </div>
 
-        <div>
-          <Webcam
-            audio={false}
-            height={350}
-            ref={this.setRef}
-            screenshotFormat="image/png"
-            width={350}
-            videoConstraints={videoConstraints}
-          />
-          <button onClick={this.capture}>Capture photo</button>
+          <div>
+            <h1>{this.state.name}</h1>
+            <p>email: {this.state.email}</p>
+            <p>phone: {this.state.phone}</p>
+            <p>
+              location: {this.state.city} {this.state.state}
+            </p>
+            <p>twitter: {this.state.twitter}</p>
+          </div>
         </div>
       </div>
     )
