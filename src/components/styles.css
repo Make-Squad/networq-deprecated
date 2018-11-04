@@ -15,7 +15,9 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 80vh;
+  height: 90vh;
+  padding-left: 20px;
+  padding-right: 20px;
   text-align: center;
   margin: 50px;
   background-color: white;
@@ -38,8 +40,20 @@ body {
 .form {
   display: flex;
   flex-direction: column;
+  margin-top: 1em;
 }
 
 #image_upload_preview {
+  margin-top: 4px;
   height: 200px;
+}
+
+.chooseFile, .submitButton {
+  margin-top: 10px;
+  padding: 8px;
+}
+
+button {
+  border-radius: 10px;
+  background-color: whitesmoke;
 }

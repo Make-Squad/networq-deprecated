@@ -121,7 +121,7 @@ class Demo extends Component {
         <form className="form" onSubmit={e => this._handleSubmit(e)}>
           <button className="fileInput imgPreview">{$imagePreview}</button>
           <input
-            className="fileInput"
+            className="fileInput chooseFile"
             type="file"
             onChange={e => this._handleImageChange(e)}
           />
