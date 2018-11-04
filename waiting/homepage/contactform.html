@@ -24,25 +24,26 @@
 <body>
     <header class="header_area">
         <nav>
-            <div style="padding-left: 200px; padding-top: 20px;">
+            <div class="navbar navbar-default navbar-static-top" style="padding-left: 200px; padding-top: 20px;">
                 <h2 style="color: hotpink; font-weight: bolder; font-size: 39px;">networq</h2>
-                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="menu_toggle">
-                        <span class="hamburger">
-                        </span>
-                        <span class="hamburger-cross">
-                            <span></span>
-                            <span></span>
-                        </span>
-                    </span>
-                </button>
+                <ul class="nav justify-content-end">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Camera</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Video</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"></a>
+                  </li>
+                </ul>
             </div>
         </nav>
     </header>
         <section class="slider_area">
-            <div class="container">
+            <div class="container" style="padding-top: 60px;">
               <form id="contact" action="" method="post">
-                <h3>Business Card Info</h3>
+                <h3 style="color: hotpink;">Business Card Info</h3>
                 <h4>Sign up for free!</h4>
                 <fieldset>
                   <input placeholder="Your name" type="text" tabindex="1" required autofocus>
@@ -127,10 +128,10 @@
             </div>
             </div>
                 <fieldset>
-                  <input placeholder="Your LinkedIn starts with linkedin.com/in/" type="url" tabindex="4" required>
+                  <input placeholder="Your LinkedIn starts with linkedin.com/in/" type="text" tabindex="4" required>
                 </fieldset>
                 <fieldset>
-                  <input placeholder="Your Twitter handle starts with @" type="url" tabindex="4" required>
+                  <input placeholder="Your Twitter handle starts with @" type="text" tabindex="4" required>
                 </fieldset>
                 <fieldset>
                   <textarea placeholder="Other" tabindex="5" required></textarea>
