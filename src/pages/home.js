@@ -1,29 +1,16 @@
-<!doctype html>
-<html lang="en">
+import React from 'react'
+import { Link } from 'gatsby'
+import renderHTML from 'react-render-html';
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    <title>Snap Cards</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="vendors/bootstrap-selector/css/bootstrap-select.min.css">
-    <!--icon font css-->
-    <link rel="stylesheet" href="vendors/themify-icon/themify-icons.css">
-    <link rel="stylesheet" href="vendors/flaticon/flaticon.css">
-    <link rel="stylesheet" href="vendors/animation/animate.css">
-    <link rel="stylesheet" href="vendors/owl-carousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="vendors/magnify-pop/magnific-popup.css">
-    <link rel="stylesheet" href="vendors/nice-select/nice-select.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-</head>
+// css imports
 
-<body>
 
+class HomePage extends React.Component {
+  render() {
+    const someHTML = `
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+    </style>
     <header class="header_area">
         <nav class="navbar navbar-expand-lg menu_two">
             <div class="container">
@@ -84,20 +71,20 @@
             </div>
         </div>
     </footer>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/propper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="vendors/bootstrap-selector/js/bootstrap-select.min.js"></script>
-    <script src="vendors/wow/wow.min.js"></script>
-    <script src="vendors/sckroller/jquery.parallax-scroll.js"></script>
-    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-    <script src="vendors/nice-select/jquery.nice-select.min.js"></script>
-    <script src="vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="vendors/isotope/isotope-min.js"></script>
-    <script src="vendors/magnify-pop/jquery.magnific-popup.min.js"></script>
-    <script src="js/main.js"></script>
-</body>
+    `
+    return (
+      <div>
 
-</html>
+        {renderHTML(someHTML)}
+        <div>
+          <Link to="/demo/">Go to Demo</Link>
+        </div>
+        <div>
+          <Link to="/video/">Go to Video</Link>
+        </div>
+      </div>
+    )
+  }
+}
+
+export default HomePage
