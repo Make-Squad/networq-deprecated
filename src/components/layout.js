@@ -27,7 +27,7 @@ const Layout = ({ children }) => (
           ]}
         >
           <html lang="en" />
-          <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet"></link>
+          
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
