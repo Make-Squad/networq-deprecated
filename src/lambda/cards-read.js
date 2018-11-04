@@ -12,9 +12,38 @@ const client = new faunadb.Client({
 })
 
 export function handler(event, context, callback) {
-  const id = getId(event.path)
+  console.log(event)
+  let id = getId(event.path)
   console.log(`Function 'cards-read' invoked. Read id: ${id}`)
-  return client
+  if (id.indexOf('%20') !== -1 || id.indexOf(' ') !== -1) {
+    id = decodeURI(id)
+    return client
+    .query(q.Paginate(q.Match(q.Ref('indexes/cards_by_name'), id)))
+    .then(response => {
+      const cardRefs = response.data
+      console.log('Cards refs', cardRefs)
+      console.log(`${cardRefs.length} cards found`)
+      // create new query out of todo refs. http://bit.ly/2LG3MLg
+      const getAllTodoDataQuery = cardRefs.map(ref => {
+        return q.Get(ref)
+      })
+      // then query the refs
+      return client.query(getAllTodoDataQuery).then(ret => {
+        return callback(null, {
+          statusCode: 200,
+          body: JSON.stringify(ret),
+        })
+      })
+    })
+    .catch(error => {
+      console.log('error', error)
+      return callback(null, {
+        statusCode: 400,
+        body: JSON.stringify('There was an error, check the logs.'),
+      })
+    })
+  } else {
+    return client
     .query(q.Get(q.Ref(`classes/cards/${id}`)))
     .then(response => {
       console.log('success', response)
@@ -27,7 +56,8 @@ export function handler(event, context, callback) {
       console.log('error', error)
       return callback(null, {
         statusCode: 400,
-        body: JSON.stringify(error),
+        body: JSON.stringify('There was an error, check the logs.'),
       })
     })
+  }
 }

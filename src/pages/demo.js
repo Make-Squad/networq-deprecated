@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Webcam from 'react-webcam'
+<<<<<<< HEAD
 import axios from 'axios'
+=======
+import { Link } from 'gatsby'
+>>>>>>> 953780b5beb98837ad904fa3624738c72581a6b4
 
 import Clarifai from 'clarifai'
 

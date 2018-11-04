@@ -68,17 +68,6 @@ button:focus {
     box-shadow: none;
 }
 
-@media (min-width: 1250px) {
-    .container {
-        max-width: 1200px;
-    }
-}
-
-@media (max-width: 767px) {
-    .container {
-        max-width: 100%;
-    }
-}
 
 .container.custom_container {
     max-width: 1520px;
@@ -2207,8 +2196,8 @@ button:focus {
 }
 
 .prototype_content .banner_subscribe .subcribes .form-control {
-    max-width: 370px;
-    width: 100%;
+    /* max-width: 370px; */
+    /* width: 100%; */
     border-radius: 3px;
     background-color: white;
     border: 0px;
@@ -10461,11 +10450,6 @@ input[type=number]::-webkit-inner-spin-button {
 
 .footer_area_two {
     background: #fbfbfd;
-}
-
-.footer_area_two .footer_top_two {
-    border-bottom: 1px solid #e9ecf3;
-    padding: 120px 0px 70px;
 }
 
 .footer_area_two .footer_top_two .f_widget.about-widget .f_list li a:before {

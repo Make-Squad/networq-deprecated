@@ -7,7 +7,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f5f7fa;
+  background-color: hsl(255, 61%, 35%);
+  font-family: 'Fjalla One', sans-serif;
 }
 
 .form-container {
@@ -15,6 +16,18 @@ body {
   justify-content: center;
   flex-direction: column;
   height: 80vh;
+  text-align: center;
+  margin: 50px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.home-container {
+  height: 50vh;
+  padding: 50px;
+  margin-bottom: 10px;
   text-align: center;
   background-color: white;
   border-radius: 10px;
