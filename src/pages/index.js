@@ -37,7 +37,10 @@ class IndexPage extends React.Component {
         <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
           <Image />
         </div>
-        <Link to="/demp/">Go to Demo</Link>
+        <Link to="/demo/">Go to Demo</Link>
+        <div>
+          <Link to="/video/">Go to Video</Link>
+        </div>
       </Layout>
     )
   }
