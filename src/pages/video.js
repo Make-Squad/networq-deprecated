@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Webcam from 'react-webcam'
+import { Link } from 'gatsby'
 
 import Clarifai from 'clarifai'
 
@@ -92,6 +93,7 @@ class Video extends Component {
 
     return (
       <div className="form-container">
+      <Link to="/">Go Back</Link>
         <h1>{this.state.name}</h1>
         <div className="previewComponent">
           <form onSubmit={e => this._handleSubmit(e)}>

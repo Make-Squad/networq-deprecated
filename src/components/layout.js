@@ -27,15 +27,19 @@ const Layout = ({ children }) => (
           ]}
         >
           <html lang="en" />
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+          <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet"></link>
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
           style={{
-            margin: '0 auto',
-            maxWidth: 960,
-            padding: '0px 1.0875rem 1.45rem',
-            paddingTop: 0,
+            height: '50vh',
+            padding: '50px',
+            marginBottom: '10px',
+            textAlign: 'center',
+            backgroundColor: 'white',
+            borderRadius: '10px',
+            // boxShadow: `0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+            //   0 3px 1px -2px rgba(0, 0, 0, 0.2)`,
           }}
         >
           {children}
