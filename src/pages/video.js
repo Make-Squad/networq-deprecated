@@ -10,7 +10,7 @@ const app = new Clarifai.App({
   apiKey: 'a',
 })
 
-class Demo extends Component {
+class Video extends Component {
   constructor(props) {
     super(props)
 
@@ -130,4 +130,4 @@ class Demo extends Component {
   }
 }
 
-export default Demo
+export default Video
