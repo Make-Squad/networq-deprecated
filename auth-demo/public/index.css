@@ -11234,6 +11234,10 @@ input[type=number]::-webkit-inner-spin-button {
 .footer_dark_ten .dark_f_bottom a {
     color: #23b1fe;
 }
+.whole-page-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+}
 
 /*====================================================*/
 
