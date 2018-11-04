@@ -1,57 +1,7 @@
-/*----------------------------------------------------
-@File: Default Styles
-@Author: Md. Shahadat Hussain
-@URL: https://themeforest.net/user/droitthemes
-
-This file contains the styling for the actual template, this
-is the file you need to edit to change the look of the
-template.
----------------------------------------------------- */
-
-/*=====================================================================
-@Template Name:
-@Author: Md. Shahadat Hussain
-@Developed By: Rony
-@Developer URL: https://themeforest.net/user/droitthemes
-
-@Default Styles
-
-Table of Content:
-01/ variables
-02/ predefine
-03/ button
-04/ preloader
-05/ header
-06/ banner
-07/ breadcrumb
-08/ features
-09/ service
-10/ price
-11/ about
-12/ testimonial
-13/ screenshot
-14/ joblist
-15/ faq
-16/ portfolio
-17/ contact
-18/ error
-19/ shop
-20/ blog
-21/ footer
-
-=====================================================================*/
-
-/*====================================================*/
-
 /*=== fonts ====*/
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900");
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
-/*===== color =====*/
-
-/*====================================================*/
-
 /*====================================================*/
 
 a {
@@ -976,6 +926,7 @@ button:focus {
 
 .header_area .container {
     position: relative;
+    margin: 0px;
 }
 
 .menu_one {
@@ -2200,8 +2151,10 @@ button:focus {
 }
 
 .mobile_img .women_img {
-    top: 15em;
-    right: 10px;
+    top: 15rem;
+    left: -15rem;
+    /* right: 100em; */
+    border-radius: 50px;
     z-index: 1;
 }
 
@@ -10509,11 +10462,6 @@ input[type=number]::-webkit-inner-spin-button {
 
 .footer_area_two {
     background: #fbfbfd;
-}
-
-.footer_area_two .footer_top_two {
-    border-bottom: 1px solid #e9ecf3;
-    padding: 120px 0px 70px;
 }
 
 .footer_area_two .footer_top_two .f_widget.about-widget .f_list li a:before {
