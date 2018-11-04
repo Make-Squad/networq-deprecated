@@ -1,11 +1,5 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import Webcam from 'react-webcam'
-<<<<<<< HEAD
-import axios from 'axios'
-=======
-import { Link } from 'gatsby'
->>>>>>> 953780b5beb98837ad904fa3624738c72581a6b4
 
 import Clarifai from 'clarifai'
 
@@ -21,9 +15,25 @@ class Demo extends Component {
 
     this.state = {
       name: 'none',
+      query_format: '',
       file: '',
       imagePreviewUrl: '',
+      email: '',
+      twitter: '',
+      city: '',
+      phone: '',
+      state: '',
     }
+  }
+
+  titleCase(str) {
+    return str
+      .toLowerCase()
+      .split(' ')
+      .map(function(word) {
+        return word.replace(word[0], word[0].toUpperCase())
+      })
+      .join(' ')
   }
 
   // https://codepen.io/hartzis/pen/VvNGZP
@@ -41,20 +51,30 @@ class Demo extends Component {
 
         this.setState({
           name: celebName,
+          query: this.titleCase(celebName),
         })
       })
 
-    axios
-      .get(
-        'https://pedantic-wozniak-e1905a.netlify.com/.netlify/functions/cards-read/Kayne%20West',
-        {
-          headers: {
-            'Access-Control-Allow-Origin': '*',
-          },
-        }
-      )
-      .then(response => console.log(response))
-    // console.log('handle uploading-', base64Data);
+    fetch('/.netlify/functions/cards-read/' + this.state.name)
+      .then(response => response.json())
+      .then(json => {
+        const res_email = json[0]['data']['email']
+        const res_twitter = json[0]['data']['twitter']
+        const res_city = json[0]['data']['city']
+        const res_phone = json[0]['data']['phone']
+        const res_state = json[0]['data']['state']
+
+        this.setState({
+          email: res_email,
+          twitter: res_twitter,
+          city: res_city,
+          phone: res_phone,
+          state: res_state,
+        })
+        // console.log(json[0])
+      })
+    // .then(json => this.setState({ loading: true, msg: json.msg }))
+    // console.log('handle uploading-', base64Data)
   }
 
   _handleImageChange(e) {
@@ -108,10 +128,12 @@ class Demo extends Component {
 
         <div>
           <h1>{this.state.name}</h1>
-          <p>email: </p>
-          <p>phone: </p>
-          <p>city, state</p>
-          <p>twitter</p>
+          <p>email: {this.state.email}</p>
+          <p>phone: {this.state.phone}</p>
+          <p>
+            location: {this.state.city} {this.state.state}
+          </p>
+          <p>twitter: {this.state.twitter}</p>
         </div>
       </div>
     )
