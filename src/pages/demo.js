@@ -1,11 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Webcam from 'react-webcam'
-<<<<<<< HEAD
 import axios from 'axios'
-=======
-import { Link } from 'gatsby'
->>>>>>> 953780b5beb98837ad904fa3624738c72581a6b4
 
 import Clarifai from 'clarifai'
 
@@ -44,16 +40,9 @@ class Demo extends Component {
         })
       })
 
-    axios
-      .get(
-        'https://pedantic-wozniak-e1905a.netlify.com/.netlify/functions/cards-read/Kayne%20West',
-        {
-          headers: {
-            'Access-Control-Allow-Origin': '*',
-          },
-        }
-      )
-      .then(response => console.log(response))
+      fetch('/.netlify/functions/cards-read/Kanye%20West')
+      .then(response => response.json())
+      .then(json => { console.log(json) })
     // console.log('handle uploading-', base64Data);
   }
 

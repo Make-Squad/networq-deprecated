@@ -3,16 +3,7 @@ import { Link } from 'gatsby'
 import renderHTML from 'react-render-html';
 
 // css imports
-import "css/bootstrap.min.css"
-import "vendors/bootstrap-selector/css/bootstrap-select.min.css"
-import "vendors/themify-icon/themify-icons.css"
-import "vendors/flaticon/flaticon.css"
-import "vendors/animation/animate.css"
-import "vendors/owl-carousel/assets/owl.carousel.min.css"
-import "vendors/magnify-pop/magnific-popup.css"
-import "vendors/nice-select/nice-select.css"
-import "css/style.css"
-import "css/responsive.css"
+
 
 class HomePage extends React.Component {
   render() {
@@ -101,20 +92,6 @@ class HomePage extends React.Component {
             </div>
         </div>
     </footer>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/propper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="vendors/bootstrap-selector/js/bootstrap-select.min.js"></script>
-    <script src="vendors/wow/wow.min.js"></script>
-    <script src="vendors/sckroller/jquery.parallax-scroll.js"></script>
-    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-    <script src="vendors/nice-select/jquery.nice-select.min.js"></script>
-    <script src="vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="vendors/isotope/isotope-min.js"></script>
-    <script src="vendors/magnify-pop/jquery.magnific-popup.min.js"></script>
-    <script src="js/main.js"></script>
     `
     return (
       <div>
