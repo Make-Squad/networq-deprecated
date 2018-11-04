@@ -58,7 +58,7 @@ class Demo extends Component {
         var url = '/.netlify/functions/cards-read/' + formatted
         console.log('url produced: ', url)
         console.log(
-          'correct version: /.netlify/functions/cards-read/kayne%20west'
+          'correct version: /.netlify/functions/cards-read/kanye%20west'
         )
         fetch(url)
           .then(response => response.json())
