@@ -5,6 +5,7 @@ import Clarifai from 'clarifai'
 
 import '../components/styles.css'
 
+
 const app = new Clarifai.App({
   apiKey: '79c4cf0e37574941b6149ee9539ec9b9',
 })
@@ -134,7 +135,7 @@ class Demo extends Component {
           </button>
         </form>
 
-        <div>
+        <div className="infoContainer">
           <h1>{this.state.name}</h1>
           <p>email: {this.state.email}</p>
           <p>phone: {this.state.phone}</p>

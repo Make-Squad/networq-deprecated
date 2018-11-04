@@ -7,7 +7,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: hsl(255, 61%, 35%);
+  background-color: #42ACEC;
   font-family: "Fjalla One", sans-serif;
 }
 
@@ -15,12 +15,13 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 90vh;
+  height: 91vh;
+  width: 30vw;
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
   margin: 50px;
-  background-color: white;
+  background-color: #F9F9F9;
   border-radius: 10px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
     0 3px 1px -2px rgba(0, 0, 0, 0.2);
@@ -45,7 +46,7 @@ body {
 
 #image_upload_preview {
   margin-top: 4px;
-  height: 200px;
+  height: 205px;
 }
 
 .chooseFile, .submitButton {
@@ -115,4 +116,13 @@ button {
 
 .video-preview {
   margin-bottom: 0px !important;
+}
+
+.infoContainer {
+  margin-top: 5px;
+  color: #999999;
+}
+
+.infoContainer h1 {
+  color: hotpink;
 }
