@@ -60,7 +60,7 @@ class Demo extends Component {
         console.log(
           'correct version: /.netlify/functions/cards-read/kayne%20west'
         )
-        fetch(url)
+        fetch(url00)
           .then(response => response.json())
           .then(json => {
             console.log(json)
