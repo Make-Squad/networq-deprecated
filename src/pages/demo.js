@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import Webcam from 'react-webcam'
-import axios from 'axios'
 
 import Clarifai from 'clarifai'
 
@@ -53,28 +51,36 @@ class Demo extends Component {
 
         this.setState({
           name: celebName,
-          query: this.titleCase(celebName),
         })
+
+        var formatted = celebName.split(' ')
+        formatted = formatted.join('%20')
+        var url = '/.netlify/functions/cards-read/' + formatted
+        console.log('url produced: ', url)
+        console.log(
+          'correct version: /.netlify/functions/cards-read/kayne%20west'
+        )
+        fetch(url)
+          .then(response => response.json())
+          .then(json => {
+            console.log(json)
+            const res_email = json[0]['data']['email']
+            const res_twitter = json[0]['data']['twitter']
+            const res_city = json[0]['data']['city']
+            const res_phone = json[0]['data']['phone']
+            const res_state = json[0]['data']['state']
+
+            this.setState({
+              email: res_email,
+              twitter: res_twitter,
+              city: res_city,
+              phone: res_phone,
+              state: res_state,
+            })
+            // console.log(json[0])
+          })
       })
 
-    fetch('/.netlify/functions/cards-read/' + this.state.name)
-      .then(response => response.json())
-      .then(json => {
-        const res_email = json[0]['data']['email']
-        const res_twitter = json[0]['data']['twitter']
-        const res_city = json[0]['data']['city']
-        const res_phone = json[0]['data']['phone']
-        const res_state = json[0]['data']['state']
-
-        this.setState({
-          email: res_email,
-          twitter: res_twitter,
-          city: res_city,
-          phone: res_phone,
-          state: res_state,
-        })
-        // console.log(json[0])
-      })
     // .then(json => this.setState({ loading: true, msg: json.msg }))
     // console.log('handle uploading-', base64Data)
   }
