@@ -31,7 +31,7 @@ export function handler(event, context, callback) {
       /* Error! return the error with statusCode 400 */
       return callback(null, {
         statusCode: 400,
-        body: JSON.stringify(error),
+        body: JSON.stringify('There was an error, check the logs.'),
       })
     })
 }
