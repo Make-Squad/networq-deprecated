@@ -8,7 +8,7 @@ import Clarifai from 'clarifai'
 import '../components/styles.css'
 
 const app = new Clarifai.App({
-  apiKey: 'ee055cb5f7494c47b0640889e562e4e9',
+  apiKey: '79c4cf0e37574941b6149ee9539ec9b9',
 })
 
 class Video extends Component {
