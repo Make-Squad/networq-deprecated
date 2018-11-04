@@ -3,10 +3,10 @@
     "use strict";
 
     /*-------------------------------------------------------------------------------
-	  Navbar 
+	  Navbar
 	-------------------------------------------------------------------------------*/
 
-    //* Navbar Fixed  
+    //* Navbar Fixed
     function navbarFixed() {
         if ($('.header_area').length) {
             $(window).scroll(function() {
@@ -459,7 +459,7 @@
     if ($(".mailchimp").length > 0) {
         $(".mailchimp").ajaxChimp({
             callback: mailchimpCallback,
-            url: "http://droitlab.us15.list-manage.com/subscribe/post?u=0fa954b1e090d4269d21abef5&id=a80b5aedb0" //Replace this with your own mailchimp post URL. Don't remove the "". Just paste the url inside "".  
+            url: "http://droitlab.us15.list-manage.com/subscribe/post?u=0fa954b1e090d4269d21abef5&id=a80b5aedb0" //Replace this with your own mailchimp post URL. Don't remove the "". Just paste the url inside "".
         });
     }
     $(".memail").on("focus", function() {
