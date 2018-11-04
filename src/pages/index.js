@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import App from '../App';
-
 import Layout from '../components/layout'
 
 class IndexPage extends React.Component {
