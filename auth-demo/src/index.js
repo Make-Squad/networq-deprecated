@@ -5,11 +5,8 @@ import 'todomvc-common/base.css';
 import 'todomvc-app-css/index.css';
 
 
-function render() {
+ReactDOM.render(
+  <App/>,
+  document.querySelector("#todoapp")
+);
 
-  ReactDOM.render(
-    <App/>,
-    document.getElementsByClassName('todoapp')[0]
-  );
-}
-render();

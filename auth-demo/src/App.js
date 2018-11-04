@@ -4,6 +4,8 @@ import { Router, Link } from "@reach/router";
 
 import Clarifai from "clarifai";
 
+import './styles.css'
+
 const app = new Clarifai.App({
   apiKey: "709c134d49844051802ae08a90f11081"
 });
@@ -68,7 +70,7 @@ class App extends Component {
       }
   
       return (
-        <div>
+        <div className="form-container">
           <h1>{this.state.name}</h1>
           <div className="previewComponent">
             <form onSubmit={(e)=>this._handleSubmit(e)}>
