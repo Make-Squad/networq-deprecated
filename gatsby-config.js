@@ -2,7 +2,7 @@ var proxy = require("http-proxy-middleware")
 
 module.exports = {
   siteMetadata: {
-    title: 'Snapcard',
+    title: 'Networq',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

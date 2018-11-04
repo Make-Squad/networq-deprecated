@@ -1,22 +1,19 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Demo from './demo'
 import Layout from '../components/layout'
-import Image from '../components/image'
 
 class IndexPage extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { loading: false, msg: null }
+    this.state = { loading: false, msg: 'null' }
   }
 
   handleClick = e => {
     e.preventDefault()
 
-    this.setState({ loading: true })
     fetch('/.netlify/functions/hello')
       .then(response => response.json())
-      .then(json => this.setState({ loading: false, msg: json.msg }))
+      .then(json => this.setState({ loading: true, msg: json.msg }))
   }
 
   render() {
@@ -24,22 +21,20 @@ class IndexPage extends React.Component {
 
     return (
       <Layout>
-        <h1>Hi people</h1>
-        <p>Welcome to your new Gatsby site.</p>
+        <div className="home-container">
+        <h1></h1>
+        <p>Welcome to Networq!</p>
         <p>
           <button onClick={this.handleClick}>
-            {loading ? 'Loading...' : 'Call Lambda'}
+            {loading ? msg : 'Call Lambda'}
           </button>
           <br />
-          <span>{msg}</span>
         </p>
-        <p>Now go build something great.</p>
-        <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-          <Image />
-        </div>
+        
         <Link to="/demo/">Go to Demo</Link>
         <div>
           <Link to="/video/">Go to Video</Link>
+        </div>
         </div>
       </Layout>
     )

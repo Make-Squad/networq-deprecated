@@ -27,7 +27,6 @@ const Layout = ({ children }) => (
           ]}
         >
           <html lang="en" />
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
