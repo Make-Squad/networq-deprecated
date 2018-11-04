@@ -58,7 +58,7 @@ class Demo extends Component {
         var url = '/.netlify/functions/cards-read/' + formatted
         console.log('url produced: ', url)
         console.log(
-          'correct version: /.netlify/functions/cards-read/kayne%20west'
+          'correct version: /.netlify/functions/cards-read/kanye%20west'
         )
         fetch(url)
           .then(response => response.json())
@@ -121,7 +121,7 @@ class Demo extends Component {
         <form className="form" onSubmit={e => this._handleSubmit(e)}>
           <button className="fileInput imgPreview">{$imagePreview}</button>
           <input
-            className="fileInput"
+            className="fileInput chooseFile"
             type="file"
             onChange={e => this._handleImageChange(e)}
           />

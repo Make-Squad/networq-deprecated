@@ -106,7 +106,7 @@ class Video extends Component {
 
   render() {
     const videoConstraints = {
-      width: 1280,
+      width: 2280,
       height: 720,
       facingMode: 'user',
     }
@@ -114,10 +114,17 @@ class Video extends Component {
     let { imagePreviewUrl } = this.state
     let $imagePreview = null
     if (imagePreviewUrl) {
-      $imagePreview = <img id="image_upload_preview" src={imagePreviewUrl} />
+      $imagePreview = (
+        <img
+          className="video-preview"
+          id="image_upload_preview"
+          src={imagePreviewUrl}
+        />
+      )
     } else {
       $imagePreview = (
         <img
+          className="video-preview"
           id="image_upload_preview"
           src="http://placehold.it/100x100"
           alt="your image"
@@ -126,36 +133,33 @@ class Video extends Component {
     }
 
     return (
-      <div className="form-container">
-        <Link to="/">Go Back</Link>
+      <div className="video-container">
         <div className="previewComponent">
-          <form onSubmit={e => this._handleSubmit(e)}>
-            <input
-              className="fileInput"
-              type="file"
-              onChange={e => this._handleImageChange(e)}
-            />
-            <button
-              className="submitButton"
-              type="submit"
-              onClick={e => this._handleSubmit(e)}
-            >
-              <span class="mi mi-face" />
-              Upload Image
-            </button>
-          </form>
-          <div className="imgPreview">{$imagePreview}</div>
-
-          <div>
+          <div className="preview-container-video">
+            <form className="video" onSubmit={e => this._handleSubmit(e)}>
+              <button
+                className="submitButton video-submit"
+                type="submit"
+                onClick={e => this._handleSubmit(e)}
+              >
+                <span class="mi mi-face" />
+                Upload Image
+              </button>
+            </form>
+            <div className="imgPreview video-preview">{$imagePreview}</div>
+          </div>
+          <div className="center">
             <Webcam
               audio={false}
               height={350}
               ref={this.setRef}
               screenshotFormat="image/png"
-              width={350}
+              width={550}
               videoConstraints={videoConstraints}
             />
-            <button onClick={this.capture}>Capture photo</button>
+            <button className="button-style" onClick={this.capture}>
+              Capture photo
+            </button>
           </div>
 
           <div>
