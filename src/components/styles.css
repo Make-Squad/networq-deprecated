@@ -46,7 +46,9 @@ body {
 
 #image_upload_preview {
   margin-top: 4px;
-  height: 205px;
+  height: 310px;
+  width: 550px;
+  margin-top: 20px;
 }
 
 .chooseFile, .submitButton {
@@ -76,6 +78,9 @@ button {
   outline: none;
   padding: 10px 5px;
 }
+.button-style:first-child {
+  margin-right: 3px;
+}
 
 .video {
   display: flex;
@@ -95,6 +100,7 @@ button {
   justify-content: center;
   flex-direction: column;
   height: 95vh;
+  width: 40vw;
   text-align: center;
   margin: 50px;
   background-color: white;
@@ -112,10 +118,12 @@ button {
   outline: none;
   padding: 10px 5px;
   width: 80%;
+
 }
 
 .video-preview {
-  margin-bottom: 0px !important;
+  margin-bottom: 10px;
+
 }
 
 .infoContainer {
@@ -125,4 +133,10 @@ button {
 
 .infoContainer h1 {
   color: hotpink;
+}
+
+.videoButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

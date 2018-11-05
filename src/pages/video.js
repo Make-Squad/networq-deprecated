@@ -25,11 +25,15 @@ class Video extends Component {
       city: '',
       phone: '',
       state: '',
+      isHidden: false,
     }
   }
+
+
   // https://codepen.io/hartzis/pen/VvNGZP
   _handleSubmit(e) {
     e.preventDefault()
+    this.capture()
     // TODO: do something with -> this.state.file
     var url = this.state.imagePreviewUrl
     var base64Data = url.split('base64,')[1]
@@ -96,11 +100,16 @@ class Video extends Component {
     this.webcam = webcam
   }
 
+  toggleHidden () {
+    this.setState({
+      isHidden: !this.state.isHidden
+    })
+  }
+
   capture = () => {
     const imageSrc = this.webcam.getScreenshot()
-
     this.setState({
-      imagePreviewUrl: imageSrc,
+      imagePreviewUrl: imageSrc, isHidden: true
     })
   }
 
@@ -134,35 +143,40 @@ class Video extends Component {
 
     return (
       <div className="video-container">
-        <div className="previewComponent">
-          <div className="preview-container-video">
-            <form className="video" onSubmit={e => this._handleSubmit(e)}>
-              <button
-                className="submitButton video-submit"
-                type="submit"
-                onClick={e => this._handleSubmit(e)}
-              >
-                <span class="mi mi-face" />
-                Upload Image
-              </button>
-            </form>
-            <div className="imgPreview video-preview">{$imagePreview}</div>
-          </div>
-          <div className="center">
-            <Webcam
+      <div className="center">
+            
+            
+      {!this.state.isHidden && <Webcam
               audio={false}
               height={350}
               ref={this.setRef}
               screenshotFormat="image/png"
               width={550}
               videoConstraints={videoConstraints}
-            />
-            <button className="button-style" onClick={this.capture}>
-              Capture photo
+            />}
+            
+          </div>
+        <div className="previewComponent">
+          <div className="preview-container-video">
+            
+            <div className="imgPreview video-preview">{$imagePreview}</div>
+          </div>
+          <div className="videoButtons">
+          <button className="button-style" onClick={this.toggleHidden.bind(this)}>
+              Start Camera
             </button>
+            <form className="video" onSubmit={e => this._handleSubmit(e)}>
+              <button
+                className="button-style"
+                type="submit"
+                onClick={e => this._handleSubmit(e)}
+              >
+                Capture Image
+              </button>
+            </form>
           </div>
 
-          <div>
+          <div className="infoContainer">
             <h1>{this.state.name}</h1>
             <p>email: {this.state.email}</p>
             <p>phone: {this.state.phone}</p>
