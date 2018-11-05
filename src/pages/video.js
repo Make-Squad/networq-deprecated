@@ -126,7 +126,7 @@ class Video extends Component {
       $imagePreview = (
         <img
           className="video-preview"
-          id="image_upload_preview"
+          id="video_upload_preview"
           src={imagePreviewUrl}
         />
       )
@@ -134,7 +134,7 @@ class Video extends Component {
       $imagePreview = (
         <img
           className="video-preview"
-          id="image_upload_preview"
+          id="video_upload_preview"
           src="http://placehold.it/100x100"
           alt="your image"
         />

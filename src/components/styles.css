@@ -46,6 +46,11 @@ body {
 
 #image_upload_preview {
   margin-top: 4px;
+  height: 205px;
+}
+
+#video_upload_preview {
+  margin-top: 4px;
   height: 310px;
   width: 550px;
   margin-top: 20px;
