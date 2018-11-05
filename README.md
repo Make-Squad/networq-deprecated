@@ -19,3 +19,5 @@
 `/public` - Build directory
 
 `netlify.toml` - Netlify deployment settings
+
+![screen shot 2018-11-04 at 5 17 00 pm](https://user-images.githubusercontent.com/26418542/47973172-ccf22d00-e057-11e8-9410-be5224819ba0.png)
