@@ -3,10 +3,10 @@
 ## Presentation Slides
 [here](https://docs.google.com/presentation/d/13ti-kM4y2TBmKT2ekVS4y6we7MBZ3X0mbtE1eEWoVcI/edit?usp=sharing)
 
-## Live Demo
+## View a Live Demo
 [here](https://networq.netlify.com/)
 
-## Built With
+## Built With :heart: With
 - [Clarifai](https://clarifai.com)
 - [Fauna](https://fauna.com/)
 - [Formspree](https://formspree.io/)
