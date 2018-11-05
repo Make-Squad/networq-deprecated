@@ -127,12 +127,12 @@ button {
 }
 
 .video-preview {
-  margin-bottom: 10px;
+  margin-bottom: 1.6em;
 
 }
 
 .infoContainer {
-  margin-top: 5px;
+  margin-top: 15px;
   color: #999999;
 }
 
@@ -144,4 +144,8 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+body {
+  font-size: 1.2em;
 }
