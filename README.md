@@ -6,7 +6,7 @@
 ## Live Demo
 [here](https://networq.netlify.com/)
 
-## Built With
+## Built With :heart: With
 - [Clarifai](https://clarifai.com)
 - [Fauna](https://fauna.com/)
 - [Formspree](https://formspree.io/)
