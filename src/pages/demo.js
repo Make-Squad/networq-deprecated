@@ -5,7 +5,6 @@ import Clarifai from 'clarifai'
 
 import '../components/styles.css'
 
-
 const app = new Clarifai.App({
   apiKey: '79c4cf0e37574941b6149ee9539ec9b9',
 })
@@ -36,7 +35,9 @@ class Demo extends Component {
       })
       .join(' ')
   }
-
+  goBack = () => {
+    window.history.back()
+  }
   // https://codepen.io/hartzis/pen/VvNGZP
   _handleSubmit(e) {
     e.preventDefault()
@@ -118,31 +119,41 @@ class Demo extends Component {
     }
 
     return (
-      <div className="form-container">
-        <form className="form" onSubmit={e => this._handleSubmit(e)}>
-          <button className="fileInput imgPreview">{$imagePreview}</button>
-          <input
-            className="fileInput chooseFile"
-            type="file"
-            onChange={e => this._handleImageChange(e)}
-          />
-          <button
-            className="submitButton"
-            type="submit"
-            onClick={e => this._handleSubmit(e)}
-          >
-            Upload Image
-          </button>
-        </form>
+      <div>
+        <button className="goBackLink button-style" onClick={this.goBack}>
+          Go Back
+        </button>
+        <div className="form-container">
+          <form className="form" onSubmit={e => this._handleSubmit(e)}>
+            <button className="fileInput imgPreview">{$imagePreview}</button>
+            <label
+              htmlFor="fileInput"
+              className="button-style"
+            >Choose image</label>
+            <input
+              className="fileInput chooseFile"
+              id="fileInput"
+              type="file"
+              onChange={e => this._handleImageChange(e)}
+            />
+            <button
+              className="button-style"
+              type="submit"
+              onClick={e => this._handleSubmit(e)}
+            >
+              Upload Image
+            </button>
+          </form>
 
-        <div className="infoContainer">
-          <h1>{this.state.name}</h1>
-          <p>email: {this.state.email}</p>
-          <p>phone: {this.state.phone}</p>
-          <p>
-            location: {this.state.city} {this.state.state}
-          </p>
-          <p>twitter: {this.state.twitter}</p>
+          <div className="infoContainer">
+            <h1>{this.state.name}</h1>
+            <p>email: {this.state.email}</p>
+            <p>phone: {this.state.phone}</p>
+            <p>
+              location: {this.state.city} {this.state.state}
+            </p>
+            <p>twitter: {this.state.twitter}</p>
+          </div>
         </div>
       </div>
     )

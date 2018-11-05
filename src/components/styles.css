@@ -149,3 +149,18 @@ button {
 body {
   font-size: 1.2em;
 }
+
+.goBackLink {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+[type=file] {
+  position: absolute;
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+label.button-style {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

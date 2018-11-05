@@ -100,6 +100,10 @@ class Video extends Component {
     this.webcam = webcam
   }
 
+  goBack = () => {
+    window.history.back()
+  }
+
   toggleHidden () {
     this.setState({
       isHidden: !this.state.isHidden
@@ -141,7 +145,11 @@ class Video extends Component {
       )
     }
 
-    return (
+    return (<div>
+      <button className="goBackLink button-style" onClick={this.goBack}>
+              Go Back
+            </button>
+      {/* <a className='goBackLink' onClick={this.goBack}>Go Back</a> */}
       <div className="video-container">
       <div className="center">
             
@@ -186,6 +194,8 @@ class Video extends Component {
             <p>twitter: {this.state.twitter}</p>
           </div>
         </div>
+      </div>
+      
       </div>
     )
   }
