@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "clarifai": "^2.9.0",
     "faunadb": "^2.5.2",
     "gatsby": "^2.0.19",
